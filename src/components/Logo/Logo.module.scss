@@ -1,0 +1,53 @@
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #181818;
+  font-family: Nunito, Roboto, system-ui, Tahoma, sans-serif;
+  margin-right: 20px;
+
+  &__image {
+    width: 38px;
+    height: 38px;
+    margin: 0 17px 0 0;
+  }
+
+  &__text {
+    margin: 0;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #181818;
+  }
+
+  &__desc {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7b7b7b;
+  }
+}
+
+@media (max-width: 1020px) {
+  .logo {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .logo {
+    &__text {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    &__desc {
+      display: none;
+    }
+  }
+}

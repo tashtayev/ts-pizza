@@ -1,0 +1,175 @@
+@import "../../styles/mixins";
+
+.cart {
+  &__container {
+    flex-grow: 1;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid #F4F4F4;
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__pizza {
+    display: grid;
+    grid-template-areas: 
+    "image title"
+    "image parametr";
+    grid-template-columns: 80px 1fr;
+    column-gap: 15px;
+    flex-basis: 50%;
+  }
+
+  &__pizzaImage {
+    grid-area: image;
+    width: 100%;
+  }
+
+  &__pizzaTitle {
+    width: 100%;
+    grid-area: title;
+    margin: 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    align-self: flex-end;
+    margin-bottom: 4px;
+  }
+
+  &__pizzaParametr {
+    width: 100%;
+    grid-area: parametr;
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #8D8D8D;
+  }
+
+  &__countContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  &__countBtn {
+    @include deleteBtn ();
+    color: #8D8D8D;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__deleteBtn {
+    @include deleteBtn ();
+    opacity: .5;
+    transition: opacity .2s;
+    
+    path {
+      fill: #000;
+    }
+
+    circle {
+      stroke: #000;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__sum {
+    margin: 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+
+@media (max-width: 870px) {
+  .cart {
+    &__item {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'pizza pizza'
+                           'count sum';
+      gap: 20px 0;
+      padding-top: 15px;
+    }
+
+    &__pizza {
+      grid-area: pizza;
+    }
+
+    &__countContainer {
+      grid-area: count;
+      justify-self: end;
+    }
+
+    &__sum {
+      grid-area: sum;
+      text-align: end;
+    }
+
+    &__deleteBtn {
+      position: absolute;
+      top: 15px;
+      right: 0;
+    }
+
+    &__pizzaTitle {
+      width: calc(100% - 40px);
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .cart {
+    &__pizza {
+      grid-template-columns: 60px 1fr
+    }
+
+    &__pizzaTitle {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  
+    &__pizzaParametr {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  
+    &__text {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &__sum {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+}

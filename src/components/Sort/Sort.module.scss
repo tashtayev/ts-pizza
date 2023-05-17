@@ -1,0 +1,52 @@
+.sort {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-right: 7px;
+
+    svg {
+      align-self: center;
+      width: 10px;
+      height: 6px;
+    }
+  }
+
+  &__text {
+    margin: 0 8px 0 0 ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    color: #2C2C2C;
+  }
+
+  &__category {
+    margin-left: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    color: #FE5F1E;
+    border-bottom: 1px dashed #FE5F1E;
+  }
+
+  &__ascIcon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 975px) {
+  .sort {
+    align-self: flex-end;
+  }
+}

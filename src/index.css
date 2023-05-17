@@ -1,0 +1,27 @@
+@import url(./vendor/normalize.css);
+
+.page {
+  min-width: 320px;
+  padding: 45px;
+  box-sizing: border-box;
+  font-family: Nunito,Roboto,system-ui,Tahoma,sans-serif;
+  font-style: normal;
+  background-color: #FFDF8C;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+.main {
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+@media (max-width: 815px) {
+  .page {
+    padding: 20px;
+  }
+}

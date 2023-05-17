@@ -1,0 +1,51 @@
+.popup {
+  position: absolute;
+  bottom: -248px;
+  right: 0;
+  width: 152px;
+  box-sizing: border-box;
+  padding: 13px 0;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  z-index: 1000;
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(254, 95, 30, 0.05);
+      font-weight: 700;
+      color: #FE5F1E;
+    }
+
+    &_active {
+      background-color: rgba(254, 95, 30, 0.05);
+      font-weight: 700;
+      color: #FE5F1E;
+    }
+  }
+
+  &__title {
+    margin: 0 8px 0 0 ;
+  }
+
+  &__icon {
+    display: block;
+    width: 14px;
+    height: 14px;
+  }
+}

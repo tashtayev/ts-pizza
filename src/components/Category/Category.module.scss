@@ -1,0 +1,29 @@
+.item {
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #2C2C2C;
+  background-color: #F9F9F9;
+  border-radius: 30px;
+  padding: 16px 34px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &_active {
+    background-color: #282828;
+    color: #fff;
+  }
+}
+
+@media (max-width: 975px) {
+  .item {
+    font-size: 13px;
+    line-height: 16px;
+    padding: 10px 20px;
+  }
+}
